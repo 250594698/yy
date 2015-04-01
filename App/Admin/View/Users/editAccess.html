@@ -1,0 +1,83 @@
+<include file="Public:top" />
+	<style>
+    	
+    </style>
+	</head>
+  
+	<body>
+    <div id="body-wrapper" > <!-- Wrapper for the radial gradient background -->		
+
+        <!--left start-->
+		
+        <include file="Public:left" /> 
+        <!--left end-->
+        
+        
+        <!-- End #sidebar -->			
+		<div id="main-content"> <!-- Main Content Section with everything -->        
+        		<div  id="header_logo">{:C("TITLE")}</div>	 		
+			<!-- Page Head -->
+			<div style="float:left; width:380px;">
+			  <h2>Users</h2></div>
+            
+			<div class="clear"></div> <!-- End .clear -->
+
+                   
+                <!-- Insert -->
+                <div class="content-box">				
+                    <div class="content-box-header">                    
+                        <ul class="content-box-tabs">			
+                        			
+                            <li><a href="#tab1" id="menu1" class="default-tab current" style="text-transform:capitalize">Add/Edit</a></li>	      
+                                                  		
+                        </ul>	    
+                         <span class="insert" style=" float:right; line-height:40px; font-size:14px; font-weight:bold;"><a href="{:U('index')}">List </a>&nbsp; &nbsp; </span>                        	
+                      <div class="clear"></div>					
+                    </div>
+                    <div class="content-box-content">			
+                        <div class="tab-content default-tab" id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->
+                          <form action="{:U('editAccessAction')}" name="editForm" method="post" id="editForm" enctype="multipart/form-data" >
+                          
+                             <input type="hidden" name="id" value="{$title.id}" >
+                            <p>
+                              <label>Title:</label>                                
+                             <input class="text-input small-input" type="text" name="title"  value="{$title.title}" />               
+                            </p>  
+                           
+                            <p>
+                            <div id="accordion">
+                                <volist name="leve1" id="vo">
+                              
+                                   <h3 style="padding: 5px 0px 5px 30px; border:1px solid #999999">{$key}</h3>
+                                    <div>
+                                        <foreach name="vo" item="v">
+                                           <label>{$rule}<input name="rule[]" type="checkbox" value="{$v}"   <in name="v" value="$arr">checked="checked"</in> >&nbsp;<span>{$key}</span></label>
+                                        </foreach>
+                                    </div>
+                                </volist>
+                            </div>	
+                           </p>
+                            
+                            <br>
+                            <input class="button" style="text-transform:capitalize" type="button" name="BtnSave" onClick="document.editForm.submit()"  value="Save" />&nbsp;&nbsp;
+                            <input class="button" type="button" onClick="window.location.href='{:U('index')}'"  value="Back" />      
+                            </form>                  	
+                        </div> <!-- End #tab1 --> 
+                    </div>
+                </div> 
+                <!--End Insert -->        
+                        	<br>
+             
+               <div class="content-box"><!-- Start Content Box -->                  
+                  <div class="content-box-header">  
+                      <!--<span class="insert" style=" float:right; line-height:40px; font-size:14px; font-weight:bold;"> <a href="{:U('group','action=detail')}">+ Insert Group</a>&nbsp; &nbsp; </span>-->
+                    <div class="clear"></div>                      
+                  </div> <!-- End .content-box-header -->
+	</body>
+<!-- Download From www.exet.tk-->
+</html>
+<script>
+$(function() {
+	$( "#accordion" ).accordion();
+});
+</script>

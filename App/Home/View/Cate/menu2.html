@@ -1,0 +1,3 @@
+<foreach name="menu2" item="v">
+     <li class="<if condition="$v['news_year'] eq $year">curr</if>"><a href="{:U('Index/cateJump',array('model_id'=>1,'year'=>$v['news_year']))}" ><i></i>{$v.news_year}<if condition="L('lang_id')==2">{:L('year')}</if></a></li>
+</foreach>

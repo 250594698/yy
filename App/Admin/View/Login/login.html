@@ -1,0 +1,50 @@
+<include file="top" />
+<script language="javascript" type="text/javascript">
+	    function ValidatePage() {
+	      if ($.trim($("#txtUserName").val()) == "") {
+	            alert("Please enter a Username");
+	            $("#txtUserName").focus();
+	            return false;
+            }	
+			 if ($.trim($("#txtUserPwd").val()) == "") {
+	            alert("Please enter a Password");
+	            $("#txtUserPwd").focus();
+	            return false;
+            }		
+		frm.submit();
+	}
+	</script>
+		
+	</head>
+  
+	<body id="login">
+		<div id="login-wrapper" class="png_bg">
+			<div id="login-top">
+				<h1>Internal Admin</h1>
+				<!-- Logo (221px width) -->
+				<img id="logo" src="__PUBLIC__/imagesAdmin/logo.png" alt="Internal Admin logo" />
+			</div> <!-- End #logn-top -->
+			<div style="text-align:center; margin:10px; margin-top:-10px; font-size:14px; color:#F00;  {$loginErr}  ">ERROR: Wrong username or password !</div>
+			<div id="login-content">
+				<div class="clear"></div>
+				<form id="frm" name="form1" method="post" action="{:U('Login/Login')}" enctype="multipart/form-data">
+					<p>
+						<label>Username</label>
+						<input class="text-input" id="txtUserName" name="txtUserName" type="text" />
+					</p>
+					<div class="clear"></div>
+					<p>
+						<label>Password</label>
+						<input class="text-input" id="txtUserPwd" name="txtUserPwd" type="password" />
+					</p>
+					<div class="clear"></div>
+					<!--<p id="remember-password">
+						<input type="checkbox" id="chkRme" name="chkRme"/>Remember me
+					</p>-->
+					<p>
+						<input class="button"  type="submit" onClick="javascript:return ValidatePage();" value="Sign In" />
+            			<input type="hidden" name="btnSave" value="" />
+					</p>
+				</form>		
+  </body>
+  </html>

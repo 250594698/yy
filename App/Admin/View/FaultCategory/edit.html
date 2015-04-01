@@ -1,0 +1,124 @@
+<include file="Public:top" />        
+  <script>
+		function delImages()
+		{
+			  $("#image").html('');
+			  $("input[name=del_iamge]").val("true");			  
+		} 
+  </script>
+	</head>
+  
+	<body>
+    
+    <div id="body-wrapper" >	
+        <include file="Public:left" /> 		
+		<div id="main-content"> <!-- Main Content Section with everything -->
+        <div  id="header_logo">{:C("TITLE")}</div>	 		
+			
+			<!-- Page Head -->
+			<div style="float:left;">
+			  <h2>Edit Trouble Category</h2>
+			</div>
+
+            
+			<div class="clear"></div> <!-- End .clear -->
+			         
+                <!-- Insert -->
+                <div class="content-box">				
+                    <div class="content-box-header">                    
+                        <ul class="content-box-tabs">						
+                            <li><a href="#tab1" class="default-tab current" style="text-transform:capitalize">General</a></li>                     		
+                        </ul>                   
+                        <span class="insert" style=" float:right; line-height:40px; font-size:14px; font-weight:bold;"> <a href="{:U('index')}">List </a>&nbsp; &nbsp; </span>  
+                      <div class="clear"></div>					
+                    </div>
+                    <form action="{:U('FaultCategory/editAction')}" method="POST" name="editForm" enctype="multipart/form-data">
+                    <div class="content-box-content">			
+                        <div class="tab-content default-tab" id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->	
+                        		<div id="sub_tabs">                               
+                               	  <ul>
+                                    <volist name="lang" id="vo" key="k" >                                    
+                                    	<li><a href="#tabs2-{$vo.value}"><img src="__PUBLIC__/imagesAdmin/{$vo.value}_icon.gif"> {$vo.txt}</a></li>
+                                    </volist>   
+                                 </ul>
+                           
+                               
+                                <volist name="langList" id="vo" key="k" >         
+                                	<div class="tabs" id="tabs2-{$vo}">                                    
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="editContent">
+                                      <tr>
+                                        <td class="fieldText">Title:</td>
+                                        <td><input class="text-input small-input" value="{$titleArr[$k]}" style="width:590px!important"  type="text" id="categories_name_{$k}" name="categories_name_{$k}" /></td>
+                                      </tr>
+                                    </table>    
+                                    </div>                                         
+                                 </volist>   
+                              </div>
+                         </div>
+     
+                    </div>
+                      <div style="padding:0 0 20px 20px">  
+                      		 <input  type="hidden" value="{$addId}" name="categories_id" />
+                      		 <input  type="hidden" value="{$model_id}" name="model_id" />
+                      		 <input  type="hidden" value="0" name="pid" />
+ 							 <input class="button" style="text-transform:capitalize" type="button" name="BtnSave" onClick="document.editForm.submit()"  value="save" />&nbsp;&nbsp;
+                             <input class="button" type="button" name="back" onClick="window.location.href='{:U('index')}'"  value="Back" />    
+                      </div>  
+                    </form> 
+                </div> 
+                <!--End Insert -->
+        
+			
+			
+			<div class="clear"></div>
+			
+			
+			<!-- Start Notifications -->
+			
+			
+
+			
+			<!-- End Notifications -->
+			
+            <div id="footer">
+				<small> <!-- Remove this notice or replace it with whatever you want -->
+						&#169; Copyright 2013
+				</small>
+			</div>
+			
+			
+			
+			<!-- End #footer -->
+			
+		</div> <!-- End #main-content -->
+		
+	</div>
+	
+		<script>
+    	$(function(){
+					$('.content-box-content ul.tab-content').hide(); // 先隐藏DIV
+					$('ul.content-box-tabs li a.default-tab').addClass('current'); // 给默认的选项卡加样式
+					$('.content-box-content ul.default-tab').show(); //
+					 
+					$('ul.content-box-tabs li a').click( //
+					function() {
+						$(this).parent().siblings().find("a").removeClass('current'); //
+						$(this).addClass('current'); //
+						var currentTab = $(this).attr('href'); //
+						$(currentTab).siblings().hide(); //
+						$(currentTab).show(); //
+						return false;
+					}
+			);
+			 $( "#sub_tabs" ).tabs();  
+		});
+    
+    </script>
+	</body>
+</html>
+
+		
+
+
+
+

@@ -1,0 +1,95 @@
+<include file="Public:top" />        
+	<style>
+    	
+    </style>
+	</head>
+  
+	<body>
+    <div id="body-wrapper" > <!-- Wrapper for the radial gradient background -->		
+
+        <!--left start-->
+		
+        <include file="Public:left" />
+        <!--left end-->
+        
+        
+        <!-- End #sidebar -->			
+		<div id="main-content"> <!-- Main Content Section with everything -->        
+        		<div  id="header_logo">{:C("TITLE")}</div>	 		
+			<!-- Page Head -->
+			<div style="float:left; width:380px;">
+			  <h2>Users</h2></div>
+            
+			<div class="clear"></div> <!-- End .clear -->
+               <div class="content-box"><!-- Start Content Box -->                  
+                  <div class="content-box-header">  
+                      <!--<span class="insert" style=" float:right; line-height:40px; font-size:14px; font-weight:bold;"> <a href="{:U('group','action=detail')}">+ Insert Group</a>&nbsp; &nbsp; </span>-->
+                    <div class="clear"></div>                      
+                  </div> <!-- End .content-box-header -->
+                  
+                  <div class="content-box-content">
+                      <div class="tab-content default-tab" id="tab1">                       
+                      <!-- This is the target div. id must match the href of this div's tab -->	
+                      
+                          
+                          <table>
+                            <thead>
+                              <tr>								   
+                                 <!-- <th>ID</th>-->
+                                  <th width="50%">Title</th>                          	                                                                                                        
+                                  <th  width="150" style="text-align:center"></th>									   						 
+                              </tr>								
+                            </thead> 
+                            <tbody>                           
+                               <volist name="groupList" id="vo" mod="2" >           
+                                     <tr <eq name="mod" value="1">class="alt-row"</eq>>	
+                                        <td style="font-size:14px"><a href="__URL__/groupUsers/id/{$vo.id}">{$vo.title}</a></td>                                           
+                                        <td style="text-align:center;">   
+                                            <a href="__URL__/editAccess/id/{$vo.id}" title="Delete">Edit</a> &nbsp; &nbsp;                             
+                                        </td>          
+                                     </tr>
+                               </volist>
+                            </tbody>
+                          </table>
+                          <div class="pagination">{$page}<div style=" clear:both;"></div></div>						
+                      </div> <!-- End #tab1 -->	
+                                       
+                      
+                  </div> <!-- End .content-box-content -->
+                  
+              </div> <!-- End .content-box -->  
+			<div class="clear"></div>
+			
+			
+			<!-- Start Notifications -->
+			
+			
+
+			
+			<!-- End Notifications -->
+			
+            <div id="footer">
+				<small> <!-- Remove this notice or replace it with whatever you want -->
+						&#169; Copyright 2013
+				</small>
+			</div>
+			
+			
+			
+			<!-- End #footer -->
+			
+		</div> <!-- End #main-content -->
+		
+	</div>
+	
+	
+	
+	</body>
+<!-- Download From www.exet.tk-->
+</html>
+<script>
+$(function() {
+	$( "#accordion" ).accordion();
+});
+</script>
+

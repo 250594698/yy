@@ -1,0 +1,10 @@
+<foreach name="menu2" item="v">
+     <li class="<if condition="$v['categories_id'] eq $cateid">curr</if>">
+     <a href="{:U('Index/cateJump',array('model_id'=>$v['model_id'],'cateid'=>$v['categories_id']))}"><i></i>{$v.categories_name}</a></li>
+</foreach>
+<foreach name="menu3" item="v">
+     <li class="<if condition="$cateids eq 54">curr</if>">
+     <a href="{:U('Index/cateJump',array('model_id'=>$v['model_id'],'cateid'=>$v['categories_id']))}"><i></i>{$v.categories_name}</a></li>
+</foreach>
+     <!-- <li class="<if condition="$cateids eq 54">curr</if>"><i></i>
+    <a href="__URL__/cateJump/model_id/7/cateid/54">{:L('Injection Molding Trouble Shooting')}</a></li> -->

@@ -1,0 +1,57 @@
+<include file="Public:top"/>
+
+		<!-- START OF MAIN -->
+		<div id="main" class="pd4">
+			<div class="breadcrumbs">
+				<a href="index.html">{:L('Home')}</a>
+				&gt;
+				<a href="#">{:L('Product')}</a>
+				&gt;
+				<foreach name="catename" item="a">
+				<span>{$a.categories_name}</span>
+				</foreach>
+			</div>
+
+			<div class="main_left2">
+				<h2 class="columnTitle columnTitle2">{:L('Product')}</h2>
+
+				<ul class="columnList1 columnList2">
+				{:W('Cate/menuProducts')}
+				</ul>
+                <script>
+                $(function(){
+				    $(".columnList1 li").click(function(){
+						 $(this).addClass("curr").siblings().removeClass();
+						});
+				});
+                </script>
+				<div class="columnbase1 columnbase2"></div>
+			</div>
+			
+            <foreach name="productsShow" item="v">
+			<div class="main_right2">
+				<div class="productBigImg">
+					<div class="productName">
+						<span><php>echo mb_substr($v['products_name'],0,10,'utf-8');</php></span>
+					</div>
+				</div>
+				<div class="explain" style='font-family: "sans serif",tahoma,verdana,helvetica'>
+				{$v.products_description}
+				</div>
+			</div>
+	    </foreach>
+		</div>
+		<!-- END OF MAIN -->
+	</div>
+	<!-- END OF CONTAINER -->
+
+	<!-- START OF FOOTER -->
+	<div id="footer">
+		<div class="footerText">
+			<p>Copyright &copy;2014 Prosperity Industrial (H.K.) Co., Ltd</p>
+		</div>
+	</div>
+	<!-- END OF FOOTER -->
+	<script src="js/jquery-2.0.2.js"></script>
+</body>
+</html>

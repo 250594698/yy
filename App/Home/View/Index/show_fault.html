@@ -1,0 +1,63 @@
+<include file="Public:top"/>
+
+		<!-- START OF MAIN -->
+		<div id="main" class="pd4 mb50">
+			<div class="breadcrumbs">
+				<a href="index.html">{:L('Home')}</a>
+				&gt;
+				<a href="#">{:L('Product')}</a>
+				&gt;
+			<foreach name="catename" item="a">
+				<span>{$a.categories_name}</span>
+			</foreach>	
+			</div>
+
+			<div class="main_left2">
+				<h2 class="columnTitle columnTitle2">{:L('Product')}</h2>
+
+				<ul class="columnList1 columnList2">
+				{:W('Cate/menuProducts')}
+				</ul>
+
+				<div class="columnbase1 columnbase2"></div>
+			</div>
+            <foreach name="faultShow" item="v">
+			<div class="main_right2">
+				<div class="productBigImg">
+					<div class="productName productName2">
+						<!-- <span>{$v.fault_num}</span> -->
+						<span><php>echo mb_substr($v['fault_name'],0,8,'utf-8');</php></span>	
+					</div>
+				</div>
+
+				<div class="mb12">
+				<php>$lang=L('lang_id');</php>
+					<if condition="$v['fault_img'] neq ''"><if condition="$lang neq '1'" ><img src="__PUBLIC__/Uploads/{$v.fault_img}" alt="" /><else /><img src="__PUBLIC__/Uploads/{$v.fault_img_en}" alt="" /></if></if>
+				</div>
+
+				<p class="explain">{:L('fault cause')}</p>
+
+				<p class="text pd-r40 l-h mb20">{$v.fault_cause}</p>
+
+				<p class="explain">{:L('Counter Measure')}</p>
+				<p class="text pd-r40 l-h">
+				{$v.fault_countermeasure}
+				</p>
+
+			</div>
+		</foreach>
+		</div>
+		<!-- END OF MAIN -->
+	</div>
+	<!-- END OF CONTAINER -->
+
+	<!-- START OF FOOTER -->
+	<div id="footer">
+		<div class="footerText">
+			<p>Copyright &copy;2014 Prosperity Industrial (H.K.) Co., Ltd</p>
+		</div>
+	</div>
+	<!-- END OF FOOTER -->
+	<script src="js/jquery-2.0.2.js"></script>
+</body>
+</html>

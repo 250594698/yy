@@ -1,0 +1,585 @@
+[ 2015-01-20T15:09:29+08:00 ] 223.197.235.13 /prosperity/www/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001535s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.000843s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000704s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021505s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004441s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `yy_products` [ RunTime:0.001521s ]
+SQL: SELECT * FROM `yy_products` left join yy_products_manylanguage on yy_products.products_id=yy_products_manylanguage.products_id  WHERE ( yy_products_manylanguage.lang_id=2 and yy_products.categories_id=52 and yy_products.products_status=1 ) ORDER BY yy_products.products_adddate desc LIMIT 4   [ RunTime:0.002016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.031072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003288s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005167s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008290s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY yy_category.sort_order  [ RunTime:0.000683s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.036863s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003893s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.010309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.014044s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.001210s ]
+SQL: SELECT * FROM `yy_news` left join yy_news_manylanguage on yy_news.news_id=yy_news_manylanguage.news_id  WHERE ( yy_news_manylanguage.lang_id=2 and yy_news.news_status=1 ) ORDER BY yy_news.news_adddate desc LIMIT 3   [ RunTime:0.001390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.044464s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003529s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.018509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.021902s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003754s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.018509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.022080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2015-01-20T15:28:34+08:00 ] 223.197.235.13 /prosperity/www/index.php/Home/Index/cateJump/model_id/2/cateid/27.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001302s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.001091s ]
+SQL: SELECT * FROM `yy_model` WHERE `model_id` = 2 LIMIT 1   [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000864s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=51 )  [ RunTime:0.000505s ]
+SQL: SHOW COLUMNS FROM `yy_products` [ RunTime:0.000927s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_products p,yy_products_manylanguage pm WHERE ( p.products_id=pm.products_id and pm.lang_id=2 and p.categories_id=51 and p.products_status=1 ) ORDER BY p.products_adddate desc LIMIT 1   [ RunTime:0.001116s ]
+SQL: SHOW COLUMNS FROM `yy_products` [ RunTime:0.000779s ]
+SQL: SELECT * FROM yy_products p,yy_products_manylanguage pm WHERE ( p.products_id=pm.products_id and pm.lang_id=2 and p.categories_id=51 and p.products_status=1 ) ORDER BY p.products_sort desc LIMIT 0,9   [ RunTime:0.000862s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000660s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=51 )  [ RunTime:0.000301s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005960s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003922s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000450s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 and yy_category.categories_status=1 ) ORDER BY yy_category.sort_order  [ RunTime:0.002419s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014974s ]
+NOTIC: [8] Undefined variable: cateids /home/project2/www/prosperity/www/App/Runtime/Cache/Home/3e779262f227f7cdb03a99e3a58ddd7a.php 第 3 行.
+NOTIC: [8] Undefined variable: cateids /home/project2/www/prosperity/www/App/Runtime/Cache/Home/3e779262f227f7cdb03a99e3a58ddd7a.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005159s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008587s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005610s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.009029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2015-01-20T15:28:34+08:00 ] 223.197.235.13 /prosperity/www/index.php/Home/Index/cateJump/model_id/2/cateid/js/jquery-2.0.2.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001296s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.000742s ]
+SQL: SELECT * FROM `yy_model` WHERE `model_id` = 2 LIMIT 1   [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000892s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=0 )  [ RunTime:0.000382s ]
+SQL: SHOW COLUMNS FROM `yy_products` [ RunTime:0.001010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_products p,yy_products_manylanguage pm WHERE ( p.products_id=pm.products_id and pm.lang_id=2 and p.categories_id=0 and p.products_status=1 ) ORDER BY p.products_adddate desc LIMIT 1   [ RunTime:0.002416s ]
+SQL: SHOW COLUMNS FROM `yy_products` [ RunTime:0.001117s ]
+SQL: SELECT * FROM yy_products p,yy_products_manylanguage pm WHERE ( p.products_id=pm.products_id and pm.lang_id=2 and p.categories_id=0 and p.products_status=1 ) ORDER BY p.products_sort desc LIMIT 0,9   [ RunTime:0.001327s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000767s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=0 )  [ RunTime:0.000431s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000672s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005788s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000272s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 and yy_category.categories_status=1 ) ORDER BY yy_category.sort_order  [ RunTime:0.000603s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.013757s ]
+NOTIC: [8] Undefined variable: cateids /home/project2/www/prosperity/www/App/Runtime/Cache/Home/3e779262f227f7cdb03a99e3a58ddd7a.php 第 3 行.
+NOTIC: [8] Undefined variable: cateids /home/project2/www/prosperity/www/App/Runtime/Cache/Home/3e779262f227f7cdb03a99e3a58ddd7a.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005991s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007546s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006283s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007825s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2015-01-20T15:30:40+08:00 ] 223.197.235.13 /prosperity/www/index.php/Home/Index/cateJump/model_id/1/cateid/26.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001537s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.001357s ]
+SQL: SELECT max(news_adddate) FROM `yy_news` LIMIT 1   [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.000810s ]
+SQL: SELECT * FROM `yy_model` WHERE `model_id` = 1 LIMIT 1   [ RunTime:0.000718s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000899s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=26 )  [ RunTime:0.000518s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000656s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_news n,yy_news_manylanguage nm WHERE ( n.news_id=nm.news_id and nm.lang_id=2 and n.news_year=2016 ) ORDER BY n.news_adddate desc LIMIT 1   [ RunTime:0.000571s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000728s ]
+SQL: SELECT * FROM yy_news n,yy_news_manylanguage nm WHERE ( n.news_id=nm.news_id and nm.lang_id=2 and n.news_year=2016 and n.news_status=1 ) ORDER BY n.news_adddate desc LIMIT 0,15   [ RunTime:0.000556s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000658s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006046s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003932s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+SQL: SELECT `news_year` FROM `yy_news` GROUP BY news_year ORDER BY news_year desc  [ RunTime:0.000360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.016886s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009214s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.010347s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009695s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.010805s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000843s ]
+
+[ 2015-01-20T15:30:40+08:00 ] 223.197.235.13 /prosperity/www/index.php/Home/Index/cateJump/model_id/1/cateid/js/jquery-2.0.2.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001227s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.001024s ]
+SQL: SELECT * FROM `yy_model` WHERE `model_id` = 1 LIMIT 1   [ RunTime:0.001363s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000848s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=0 )  [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000655s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_news n,yy_news_manylanguage nm WHERE ( n.news_id=nm.news_id and nm.lang_id=2 and n.news_year=0 ) ORDER BY n.news_adddate desc LIMIT 1   [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000939s ]
+SQL: SELECT * FROM yy_news n,yy_news_manylanguage nm WHERE ( n.news_id=nm.news_id and nm.lang_id=2 and n.news_year=0 and n.news_status=1 ) ORDER BY n.news_adddate desc LIMIT 0,15   [ RunTime:0.000569s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000723s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005798s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000290s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000888s ]
+SQL: SELECT `news_year` FROM `yy_news` GROUP BY news_year ORDER BY news_year desc  [ RunTime:0.000330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012682s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003797s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002569s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004064s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002569s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2015-01-20T16:06:44+08:00 ] 223.197.235.13 /prosperity/www/index.php/Home/Index/cateJump/model_id/1/year/2015.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001195s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.000888s ]
+SQL: SELECT * FROM `yy_model` WHERE `model_id` = 1 LIMIT 1   [ RunTime:0.000227s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000852s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=0 )  [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000794s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_news n,yy_news_manylanguage nm WHERE ( n.news_id=nm.news_id and nm.lang_id=2 and n.news_year=2015 ) ORDER BY n.news_adddate desc LIMIT 1   [ RunTime:0.001260s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000646s ]
+SQL: SELECT * FROM yy_news n,yy_news_manylanguage nm WHERE ( n.news_id=nm.news_id and nm.lang_id=2 and n.news_year=2015 and n.news_status=1 ) ORDER BY n.news_adddate desc LIMIT 0,15   [ RunTime:0.001141s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000640s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005593s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003651s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000249s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000691s ]
+SQL: SELECT `news_year` FROM `yy_news` GROUP BY news_year ORDER BY news_year desc  [ RunTime:0.000210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011523s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003427s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001941s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005245s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003960s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001941s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005750s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2015-01-20T16:06:44+08:00 ] 223.197.235.13 /prosperity/www/index.php/Home/Index/cateJump/model_id/1/year/js/jquery-2.0.2.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001232s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.000687s ]
+SQL: SELECT * FROM `yy_model` WHERE `model_id` = 1 LIMIT 1   [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000763s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=0 )  [ RunTime:0.000282s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000480s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_news n,yy_news_manylanguage nm WHERE ( n.news_id=nm.news_id and nm.lang_id=2 and n.news_year=0 ) ORDER BY n.news_adddate desc LIMIT 1   [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000555s ]
+SQL: SELECT * FROM yy_news n,yy_news_manylanguage nm WHERE ( n.news_id=nm.news_id and nm.lang_id=2 and n.news_year=0 and n.news_status=1 ) ORDER BY n.news_adddate desc LIMIT 0,15   [ RunTime:0.000489s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000553s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005389s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003666s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003754s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000281s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000817s ]
+SQL: SELECT `news_year` FROM `yy_news` GROUP BY news_year ORDER BY news_year desc  [ RunTime:0.000280s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.011548s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003384s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005428s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003607s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005635s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2015-01-20T16:18:01+08:00 ] 223.197.235.13 /prosperity/www/index.php/Home/Index/cateShow/cate_id/26/news_id/43.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001241s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.001323s ]
+SQL: SELECT `model_id` FROM `yy_category` WHERE ( categories_id=26 ) LIMIT 1   [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.001260s ]
+SQL: SELECT * FROM `yy_model` WHERE ( model_id=1 ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000672s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=26 )  [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000797s ]
+SQL: SELECT * FROM yy_news n,yy_news_manylanguage nm WHERE ( n.news_id=nm.news_id and nm.lang_id=2 and nm.news_id=43 )  [ RunTime:0.000349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000634s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005926s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000217s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000828s ]
+SQL: SELECT `news_year` FROM `yy_news` GROUP BY news_year ORDER BY news_year desc  [ RunTime:0.000323s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012406s ]
+NOTIC: [8] Undefined variable: year /home/project2/www/prosperity/www/App/Runtime/Cache/Home/a61a6e7e5971221e98f16410a9ea61c7.php 第 1 行.
+NOTIC: [8] Undefined variable: year /home/project2/www/prosperity/www/App/Runtime/Cache/Home/a61a6e7e5971221e98f16410a9ea61c7.php 第 1 行.
+NOTIC: [8] Undefined variable: year /home/project2/www/prosperity/www/App/Runtime/Cache/Home/a61a6e7e5971221e98f16410a9ea61c7.php 第 1 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003636s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002369s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005796s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003967s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002369s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2015-01-20T16:18:01+08:00 ] 223.197.235.13 /prosperity/www/index.php/Home/Index/cateShow/cate_id/26/news_id/js/jquery-2.0.2.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001209s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000668s ]
+SQL: SELECT `model_id` FROM `yy_category` WHERE ( categories_id=26 ) LIMIT 1   [ RunTime:0.000284s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.000614s ]
+SQL: SELECT * FROM `yy_model` WHERE ( model_id=1 ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000650s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=26 )  [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000655s ]
+SQL: SELECT * FROM yy_news n,yy_news_manylanguage nm WHERE ( n.news_id=nm.news_id and nm.lang_id=2 and nm.news_id=js )  [ RunTime:0.000236s ]
+ERR: 1054:Unknown column 'js' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM yy_news n,yy_news_manylanguage nm WHERE ( n.news_id=nm.news_id and nm.lang_id=2 and nm.news_id=js ) 
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000606s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005573s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.000783s ]
+SQL: SELECT `news_year` FROM `yy_news` GROUP BY news_year ORDER BY news_year desc  [ RunTime:0.000358s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012157s ]
+NOTIC: [8] Undefined variable: year /home/project2/www/prosperity/www/App/Runtime/Cache/Home/a61a6e7e5971221e98f16410a9ea61c7.php 第 1 行.
+NOTIC: [8] Undefined variable: year /home/project2/www/prosperity/www/App/Runtime/Cache/Home/a61a6e7e5971221e98f16410a9ea61c7.php 第 1 行.
+NOTIC: [8] Undefined variable: year /home/project2/www/prosperity/www/App/Runtime/Cache/Home/a61a6e7e5971221e98f16410a9ea61c7.php 第 1 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003481s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002427s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005605s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003719s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002427s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2015-01-20T16:32:14+08:00 ] 223.197.235.13 /prosperity/www/index.php/Home/Index/cateJump/model_id/2/cateid/27.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001401s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.000980s ]
+SQL: SELECT * FROM `yy_model` WHERE `model_id` = 2 LIMIT 1   [ RunTime:0.000279s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000692s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=51 )  [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `yy_products` [ RunTime:0.001118s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_products p,yy_products_manylanguage pm WHERE ( p.products_id=pm.products_id and pm.lang_id=2 and p.categories_id=51 and p.products_status=1 ) ORDER BY p.products_adddate desc LIMIT 1   [ RunTime:0.000756s ]
+SQL: SHOW COLUMNS FROM `yy_products` [ RunTime:0.000792s ]
+SQL: SELECT * FROM yy_products p,yy_products_manylanguage pm WHERE ( p.products_id=pm.products_id and pm.lang_id=2 and p.categories_id=51 and p.products_status=1 ) ORDER BY p.products_sort desc LIMIT 0,9   [ RunTime:0.000920s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000753s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=51 )  [ RunTime:0.000285s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000552s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.005875s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003929s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000261s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 and yy_category.categories_status=1 ) ORDER BY yy_category.sort_order  [ RunTime:0.000549s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012790s ]
+NOTIC: [8] Undefined variable: cateids /home/project2/www/prosperity/www/App/Runtime/Cache/Home/3e779262f227f7cdb03a99e3a58ddd7a.php 第 3 行.
+NOTIC: [8] Undefined variable: cateids /home/project2/www/prosperity/www/App/Runtime/Cache/Home/3e779262f227f7cdb03a99e3a58ddd7a.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005153s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006644s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005658s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2015-01-20T16:32:14+08:00 ] 223.197.235.13 /prosperity/www/index.php/Home/Index/cateJump/model_id/2/cateid/js/jquery-2.0.2.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001242s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.000734s ]
+SQL: SELECT * FROM `yy_model` WHERE `model_id` = 2 LIMIT 1   [ RunTime:0.000251s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000733s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=0 )  [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `yy_products` [ RunTime:0.000681s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_products p,yy_products_manylanguage pm WHERE ( p.products_id=pm.products_id and pm.lang_id=2 and p.categories_id=0 and p.products_status=1 ) ORDER BY p.products_adddate desc LIMIT 1   [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `yy_products` [ RunTime:0.000765s ]
+SQL: SELECT * FROM yy_products p,yy_products_manylanguage pm WHERE ( p.products_id=pm.products_id and pm.lang_id=2 and p.categories_id=0 and p.products_status=1 ) ORDER BY p.products_sort desc LIMIT 0,9   [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000690s ]
+SQL: SELECT * FROM yy_category c,yy_category_description cd WHERE ( c.categories_id=cd.categories_id and cd.language_id=2 and c.categories_id=0 )  [ RunTime:0.000885s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000608s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006360s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000264s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 and yy_category.categories_status=1 ) ORDER BY yy_category.sort_order  [ RunTime:0.000603s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014172s ]
+NOTIC: [8] Undefined variable: cateids /home/project2/www/prosperity/www/App/Runtime/Cache/Home/3e779262f227f7cdb03a99e3a58ddd7a.php 第 3 行.
+NOTIC: [8] Undefined variable: cateids /home/project2/www/prosperity/www/App/Runtime/Cache/Home/3e779262f227f7cdb03a99e3a58ddd7a.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005741s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007337s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006028s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007802s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000603s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+

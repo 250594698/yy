@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit(); if(in_array(($idtop), is_array($rules)?$rules:explode(',',$rules))): ?><a href="#" class="nav-top-item <?php if(in_array(MODULE_NAME,$value)) echo 'current'; ?>">Configuration</a><?php endif; ?>

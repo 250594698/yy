@@ -1,0 +1,29 @@
+#container {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0px 12px;
+}
+
+#header {
+	height: 94px;
+	overflow: hidden;
+}
+
+#nav {
+	margin-bottom: 20px;
+}
+
+#banner {
+	width: 1000px;
+	height: 252px;
+	margin-bottom: 36px;
+}
+
+#main {
+	overflow: hidden;
+}
+
+#footer	{
+	height: 30px;
+	background: #FF3333;
+}

@@ -1,0 +1,137 @@
+<include file="Public:top" />        
+     <script>
+        $(function() {
+		  $(".status .light").click(function(){		
+			   var id = $(this).parent().parent().attr("id");
+			   $.get("{:U('changeStatus')}", { id: id },
+				function(data){
+					 $("#"+id).find("span").removeClass("current");
+				 	 if (data == 1)
+					 {
+						 $("#"+id).find("span").eq(0).addClass("current");
+					 }
+					 else
+					 {
+						 $("#"+id).find("span").eq(1).addClass("current");
+					 }
+				}); 
+		  })		  
+        });	
+		</script>
+
+	</head>
+    <style>
+    .stats{ color:#F00;}
+    </style>
+	<body>
+    
+    
+
+    
+
+    
+    <div id="body-wrapper" > <!-- Wrapper for the radial gradient background -->		
+
+        <!--left start-->
+		
+        <include file="Public:left" /> 
+        <!--left end-->
+        
+        
+        <!-- End #sidebar -->			
+		<div id="main-content"> <!-- Main Content Section with everything -->        
+        		<div  id="header_logo">{:C("TITLE")}</div>	 		
+			
+			<!-- Page Head -->
+			<div style="float:left; width:380px;">
+			  <h2>Aboutus</h2></div>
+			<div id="sreach">
+            <form name="sreach" method="get" action="{:U('index',array('cateid'=>$cateid))}">
+            
+              <input type="text" style="width:150px;" class="text-input " id="keyword" name="keyword">
+              <!-- <strong><a onClick="document.sreach.submit(); return false;" href="__URL__/index/cateid/{$cateid}">Search</a></strong> -->
+              <input type="submit" value="Search" style="height:25px;"/>
+            </form>
+            </div>
+            
+			<div class="clear"></div> <!-- End .clear -->
+            <br>             
+               <div class="content-box"><!-- Start Content Box -->                  
+                  <div class="content-box-header">  
+                      <span class="insert" style=" float:right; line-height:40px; font-size:14px; font-weight:bold;"> <a href="{:U('addAboutus',array('cate_id'=>$cateid))}">+ Insert</a>&nbsp; &nbsp; </span>
+                    <div class="clear"></div>                      
+                  </div> <!-- End .content-box-header -->
+                  
+                  <div class="content-box-content">
+                      <div class="tab-content default-tab" id="tab1">                       
+                      <!-- This is the target div. id must match the href of this div's tab -->	
+                      
+                          
+                          <table>
+                            <thead>
+                              <tr>								   
+                                 <!-- <th>ID</th>-->
+                                 <th width="50%">Title {:createUpDownLink('news_title')}</th>
+                                  <th   >Date {:createUpDownLink('news_adddate')}</th>      
+                                  <th   >Sort Order {:createUpDownLink('news_sort')}</th>                           
+                                  <th   style="text-align:center">Status</th>          	                                                                                                        
+                                  <th  width="150" style="text-align:center"></th>									   						 
+                              </tr>								
+                            </thead> 
+                            <tbody>                           
+                               <volist name="newsList" id="vo" mod="2" >             
+                                 <tr <eq name="mod" value="1">class="alt-row"</eq>>	
+                                    <td style="font-size:14px">{$vo.aboutus_title}</td>      
+                                    <td >{$vo['aboutus_adddate']|strtotime|date='Y-m-d',###}</td> 
+                                    <td >{$vo['aboutus_sort']}</td>                                       
+                                    <td style="text-align:center" id="{$vo.news_id}" class="status">
+                                        <if condition="$vo.news_status eq 1"><a href="__URL__/statsAction/ac/0/id/{$vo.news_id}/cateid/{$cateid}">开启</a><else/><a href="__URL__/statsAction/ac/1/id/{$vo.news_id}/cateid/{$cateid}" class="stats">关闭</a></if>                                
+                                    </td>
+                                   
+                                    <td style="text-align:center;">   
+                                      <a href="{:U('editNews',array('news_id'=>$vo['news_id'],'cate_id'=>$cateid))}" title="editNews">Edit</a> &nbsp; &nbsp;                              
+                                      <a href="{:U('deleteNews',array('news_id'=>$vo['news_id'],'cate_id'=>$cateid))}" onClick="return confirm('Delete this news?')"  title="Delete">Delete</a> 
+                                    </td>  
+                                              
+                                 </tr>
+                               </volist>
+                            </tbody>
+                          </table>
+                          <div class="pagination">{$page}<div style=" clear:both;"></div></div>						
+                      </div> <!-- End #tab1 -->	
+                                       
+                      
+                  </div> <!-- End .content-box-content -->
+                  
+              </div> <!-- End .content-box -->          
+			
+			
+			<div class="clear"></div>
+			
+			
+			<!-- Start Notifications -->
+			
+			
+
+			
+			<!-- End Notifications -->
+			
+            <div id="footer">
+				<small> <!-- Remove this notice or replace it with whatever you want -->
+						&#169; Copyright 2013
+				</small>
+			</div>
+			
+			
+			
+			<!-- End #footer -->
+			
+		</div> <!-- End #main-content -->
+		
+	</div>
+	
+	
+	
+	</body>
+<!-- Download From www.exet.tk-->
+</html>

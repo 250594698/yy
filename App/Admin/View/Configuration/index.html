@@ -1,0 +1,68 @@
+<include file="Public:top" />
+	</head>
+	<body>
+    <div id="body-wrapper" > <!-- Wrapper for the radial gradient background -->		
+
+        <!--left start-->
+		
+        <include file="Public:left" /> 
+        <!--left end-->
+        
+        
+        <!-- End #sidebar -->			
+		<div id="main-content"> <!-- Main Content Section with everything -->        
+        		<div  id="header_logo">{:C("TITLE")}</div>	 		
+			
+			<!-- Page Head -->
+			<div style="float:left; width:380px;">
+			  <h2>Configuration</h2></div>
+			<div class="clear"></div> <!-- End .clear -->     
+                  {$msg}
+                <!-- Insert -->
+                <div class="content-box">				
+                    <div class="content-box-header">                                          	
+                      <div class="clear"></div>					
+                    </div>
+                    <div class="content-box-content">			
+                        <div class="tab-content default-tab" id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->	
+                          <form action="{:U('saveConfiguRation')}" name="insertForm" method="post" enctype="multipart/form-data" >
+                             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                            <foreach name="site" item="v">
+                            <tr class="alt-row">
+                                <th width="120">{$v.conf_name}:</th>
+                                <td>
+                                <input name="{$v.conf_id}{$v.conf_name}" type="text" class="text-input small-input" size="40" value="{$v.conf_value}" />
+                                </td>
+                            </tr>
+                            </foreach>
+                        </table>
+                              
+                            <br>
+                             <input class="button" style="text-transform:capitalize" type="button" name="BtnSave" onClick="document.insertForm.submit()"  value="Save" />&nbsp;&nbsp;
+                            </form>     
+                            
+                            <!--<input class="button" type="button" name="back" onClick="window.location.href='{:U('index')}'"  value="返回" /-->                  	
+                        </div> <!-- End #tab1 --> 
+                    </div>
+                </div> 
+                <!--End Insert -->
+			<div class="clear"></div>
+			<!-- Start Notifications -->
+			<!-- End Notifications -->
+			
+            <div id="footer">
+				<small> <!-- Remove this notice or replace it with whatever you want -->
+						&#169; Copyright 2013
+				</small>
+			</div>
+			<!-- End #footer -->
+			
+		</div> <!-- End #main-content -->
+		
+	</div>
+	
+	
+	
+	</body>
+<!-- Download From www.exet.tk-->
+</html>

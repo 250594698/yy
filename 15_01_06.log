@@ -1,0 +1,6 @@
+[ 2015-01-06T14:37:28+08:00 ] 101.226.51.228 /prosperity/www/index.php/ad
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+ERR: 无法加载模块:Ad
+

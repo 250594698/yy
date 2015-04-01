@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{:C("SITE_INFO.name")}</title>
+<link rel="stylesheet" href="__PUBLIC__/cssAdmin/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="__PUBLIC__/cssAdmin/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="__PUBLIC__/cssAdmin/invalid.css" type="text/css" media="screen" />	
+
+<script type="text/javascript" src="__PUBLIC__/jsAdmin/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/jsAdmin/simpla.jquery.configuration.js"></script>
+<script type="text/javascript" src="__PUBLIC__/jsAdmin/jquery.wysiwyg.js"></script>   
+<link rel="stylesheet" href="__PUBLIC__/jsAdmin/ui/redmond/jquery-ui-1.8.6.css">        
+      <script type="text/javascript" src="__PUBLIC__/jsAdmin/ui/jquery-ui-1.8.6.min.js"></script>
+
+      <script src="__PUBLIC__/jsAdmin/scripts/utils.js" type="text/javascript"></script>
+        
+    <!-- ckeditor  -->        
+     <link rel="stylesheet" href="__PUBLIC__/kindeditor/themes/default/default.css" />
+     <script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor.js"></script>
+        
+	  <script>
+          KindEditor.ready(function(K) {
+              var editor = K.create('textarea.HTMLeditor', {
+                          allowFileManager : true,
+                          width : 800,
+                          height : 400,
+						  afterBlur: function(){this.sync();}
+				}); 
+          });	
+      </script>
+       
+      <script type="text/javascript" src="__PUBLIC__/jsAdmin/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+      <script type="text/javascript" src="__PUBLIC__/jsAdmin/fancybox/jquery.fancybox-1.3.4.pack.js"></script>      
+      <link rel="stylesheet" type="text/css" href="__PUBLIC__/jsAdmin/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+      <script>
+	  $(function(){
+		 $("a.fancyBox").fancybox(); 
+	  })	 
+	  </script>

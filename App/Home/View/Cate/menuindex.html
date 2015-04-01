@@ -1,0 +1,8 @@
+<foreach name="menuindex" item="v">
+						<div class="newsItem">
+							<span class="newTime">{$v.news_adddate|strtotime|date='Y/m/d',###}</span>
+							<a href="{:U('Index/cateShow',array('cate_id'=>26,'news_id'=>$v['news_id']))}"><span class="newSlogan">
+							  <php>echo mb_substr($v['news_title'],0,28,'utf-8');</php>
+							</span></a>
+						</div>
+</foreach>

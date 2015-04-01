@@ -1,0 +1,142 @@
+<include file="Public:top" />        
+     <script>
+        $(function() {
+		  $(".status .light").click(function(){		
+			   var id = $(this).parent().parent().attr("id");
+			   $.get("{:U('changeStatus')}", { id: id },
+				function(data){
+					 $("#"+id).find("span").removeClass("current");
+				 	 if (data == 1)
+					 {
+						 $("#"+id).find("span").eq(0).addClass("current");
+					 }
+					 else
+					 {
+						 $("#"+id).find("span").eq(1).addClass("current");
+					 }
+				}); 
+		  })		  
+        });	
+		
+		</script>
+
+	</head>
+     <style>
+    .stats{ color:#F00;}
+    </style>
+	<body>
+    
+    
+
+    
+
+    
+    <div id="body-wrapper" > <!-- Wrapper for the radial gradient background -->		
+
+        <!--left start-->
+		
+        <include file="Public:left" /> 
+        <!--left end-->
+        
+        
+        <!-- End #sidebar -->			
+		<div id="main-content"> <!-- Main Content Section with everything -->
+        <div  id="header_logo">{:C("TITLE")}</div>	 		
+			
+			<!-- Page Head -->
+			<div style="float:left; width:380px;">
+			  <h2>Banners  </h2></div>
+
+            
+			<div class="clear"></div> <!-- End .clear -->
+			
+            <br>
+             {$msg}
+             
+               <div class="content-box"><!-- Start Content Box -->                  
+                  <div class="content-box-header">  
+                      <span class="insert" style=" float:right; line-height:40px; font-size:14px; font-weight:bold;"> <a href="{:U('addBanner')}">+ insert</a>&nbsp; &nbsp; </span>
+                    <div class="clear"></div>                      
+                  </div> <!-- End .content-box-header -->
+                  
+                  <div class="content-box-content">
+                      <div class="tab-content default-tab" id="tab1">                       
+                      <!-- This is the target div. id must match the href of this div's tab -->	
+                      
+                          
+                          <table>
+                            <thead>
+                              <tr>								   
+                                 <!-- <th>ID</th>-->
+                                  <th >Title{:createUpDownLink('banner_title')}</th>
+                                  <th width="40%">Image</th>
+                                  <th   >Sort Order{:createUpDownLink('sort_order')}</th>                                  
+                                  <th   style="text-align:center">Status</th>          	                                                                                                        
+                                  <th  width="200" style="text-align:center"></th>									   						 
+                              </tr>								
+                            </thead> 
+                            <tbody>                             
+                               <volist name="bannerList" id="vo" mod="2" >            
+                                 <tr <eq name="mod" value="1">class="alt-row"</eq>>	
+                                    <td style="font-size:14px;vertical-align:middle">{$vo.banner_title}</td>      
+                                     <td >
+                                     <if condition="$vo['banner_image'] neq ''">
+                                       <a href="#" class="fancyBox"><img src="__PUBLIC__/Uploads/{$vo.banner_image}" width="200"/></a>
+                                     </if></td> 
+                                    <td style="vertical-align:middle">{$vo.sort_order}</td>                                    
+                                    <td style="text-align:center; vertical-align:middle" id="{$vo.banner_id}" class="status">
+                                    <if condition="$vo.banner_status eq 1"><a href="__URL__/statsAction/ac/0/id/{$vo.banner_id}">On</a>
+                                    <else/><a href="__URL__/statsAction/ac/1/id/{$vo.banner_id}" class="stats">Off</a></if>                                   
+                                    </td>
+                                   
+                                    <td style="text-align:center; vertical-align:middle">   
+                                      <a href="{:U('editBanner','banner_id='.$vo['banner_id'])}" title="Edit">Edit</a> &nbsp; &nbsp;                              
+                                      <a href="{:U('deleteBanner','banner_id='.$vo['banner_id'])}" onClick="return confirm('Delete this banner?')"  title="Delete">Delete</a> 
+                                    </td>  
+                                              
+                                 </tr>
+                               </volist>
+                            </tbody>
+                          </table>
+                          <div class="pagination">{$page}<div style=" clear:both;"></div></div>						
+                      </div> <!-- End #tab1 -->	
+                                       
+                      
+                  </div> <!-- End .content-box-content -->
+                  
+              </div> <!-- End .content-box -->
+                       
+			
+			
+			<div class="clear"></div>
+			
+			
+			<!-- Start Notifications -->
+			
+			
+
+			
+			<!-- End Notifications -->
+			
+            <div id="footer">
+				<small> <!-- Remove this notice or replace it with whatever you want -->
+						&#169; Copyright 2013
+				</small>
+			</div>
+			
+			
+			
+			<!-- End #footer -->
+			
+		</div> <!-- End #main-content -->
+		
+	</div>
+	
+	
+	
+	</body>
+<!-- Download From www.exet.tk-->
+</html>
+
+		
+

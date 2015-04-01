@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<link rel="stylesheet" href="__PUBLIC__/cssHome/layout.css" />
+	<link rel="stylesheet" href="__PUBLIC__/cssHome/style.css" />
+
+	<link rel="stylesheet" href="__PUBLIC__/cssHome/base.css" />
+	<script type="text/javascript" src="__PUBLIC__/jsHome/jquery-2.0.2.js"></script>  
+</head>
+<body>
+	<!-- START OF CONTAINER -->
+	<div id="container">
+		<!-- START OF HEADER -->
+		<div id="header">
+			<div class="logo">
+				<a href="index.html">
+					<img src="__PUBLIC__/imagesHome/logo.png" alt="" />
+				</a>
+			</div>
+			<div class="lang">
+				<a href="?l=en-us" <if condition="L('lang_id') eq 1">style="color:#F00;"</if> >English</a>
+				<a href="?l=zh-cn" <if condition="L('lang_id') eq 2">style="color:#F00;"</if>>中文</a>
+			</div>
+            <script>
+            $(".lang a").click(function(){
+				$(this).addClass();
+			   //alert('你好');	
+			});
+            </script>			
+		</div>
+		<!-- END OF HEADER -->
+
+		<!-- START OF NAV -->
+		<div id="nav">
+			<ul class="navList">
+				<li>
+					<a href="{:U('Index/index')}" class="<if condition="$styles eq 'nav_home'">nav_home curr<else/>nav_home</if>">{:L('Home')}</a>
+				</li>
+				{:W('Cate/menu')}
+			</ul>
+</script>
+		</div>
+		<!-- END OF NAV -->

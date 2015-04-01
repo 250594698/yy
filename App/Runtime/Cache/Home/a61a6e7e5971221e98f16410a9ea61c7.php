@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit(); if(is_array($menu2)): foreach($menu2 as $key=>$v): ?><li class="<?php if($v['news_year'] == $year): ?>curr<?php endif; ?>"><a href="<?php echo U('Index/cateJump',array('model_id'=>1,'year'=>$v['news_year']));?>" ><i></i><?php echo ($v["news_year"]); if(L('lang_id')==2): echo L('year'); endif; ?></a></li><?php endforeach; endif; ?>

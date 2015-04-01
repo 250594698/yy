@@ -1,0 +1,48 @@
+<include file="Public:top"/>
+
+		<!-- START OF MAIN -->
+		<div id="main" class="mb50 pd4">
+			<div class="breadcrumbs">
+				<a href="index.html">{:L('Home')}</a>
+				&gt;
+				<span>{:L('News')}-></span>
+		    <foreach name="newsShow" item="a">
+				<span>{$a.news_year}</span>
+			</foreach>
+			</div>	
+
+			<div class="main_left2">
+				<h2 class="columnTitle">
+					{:L('News')}
+				</h2>
+
+				<ul class="columnList1">
+				  {:W('Cate/menu2')}
+				</ul>
+
+				<div class="columnbase1"></div>
+			</div>
+            <foreach name="newsShow" item="v">
+			<div class="main_right2">
+				<h2 class="main_title2">{$v.news_title}</h2>
+				<if condition="L('lang_id') eq 1"><p class="text mb20">{$v.news_adddate|strtotime|date='d M Y',###}</p>
+					<else/><p class="text mb20">{$v.news_adddate|strtotime|date="Y年m月d日",###}</p></if>
+                {$v.news_content}
+				
+			</div>
+			</foreach>
+		</div>
+		<!-- END OF MAIN -->
+	</div>
+	<!-- END OF CONTAINER -->
+	
+	<!-- START OF FOOTER -->
+	<div id="footer">
+		<div class="footerText">
+			<p>Copyright &copy;2014 Prosperity Industrial (H.K.) Co., Ltd</p>
+		</div>
+	</div>
+	<!-- END OF FOOTER -->
+	<script src="js/jquery-2.0.2.js"></script>
+</body>
+</html>

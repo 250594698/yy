@@ -1,0 +1,3 @@
+<foreach name="Catalogues" item="v">
+	<a href="{:U('Index/cateShow',array('cate_id'=>$v['categories_id'],'products_id'=>$v['products_id']))}"><img <if condition="$v['products_IndexImg'] eq ''">src="__PUBLIC__/Uploads/indexnull.png" alt="" /><else/>src="__PUBLIC__/Uploads{$v.products_IndexImg}" alt="" /></if> </a>
+</foreach>

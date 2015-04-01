@@ -1,0 +1,98 @@
+<include file="Public:top" />        
+
+	</head>
+  
+	<body>
+    
+    
+
+    
+
+    
+    <div id="body-wrapper" > <!-- Wrapper for the radial gradient background -->		
+
+        <!--left start-->
+		
+        <include file="Public:left" /> 
+        <!--left end-->
+        
+        
+        <!-- End #sidebar -->			
+		<div id="main-content"> <!-- Main Content Section with everything -->
+        <div  id="header_logo">{:C("TITLE")}</div>	 		
+			
+			<!-- Page Head -->
+			<div style="float:left; width:380px;">
+			  <h2>Edit User  </h2></div>
+			<div class="clear"></div> <!-- End .clear -->         
+                <!-- Insert -->
+                <div class="content-box">				
+                    <div class="content-box-header">                    
+                        <ul class="content-box-tabs">			
+                        			
+                            <li><a href="#tab1" id="menu1" class="default-tab current" style="text-transform:capitalize">Add/Edit</a></li>	      
+                                                  		
+                        </ul>	    
+                         <span class="insert" style=" float:right; line-height:40px; font-size:14px; font-weight:bold;"><a href="{:U('index')}">List </a>&nbsp; &nbsp; </span>                        	
+                      <div class="clear"></div>					
+                    </div>
+                    <div class="content-box-content">			
+                        <div class="tab-content default-tab" id="tab1"> <!-- This is the target div. id must match the href of this div's tab -->	
+                          <form action="{:U('editUserAction')}" name="editForm" method="post" enctype="multipart/form-data" >
+                          
+                             <input type="hidden" name="id" value="{$name.uid}" >
+                             <p>
+                              <label>Username:</label>                                
+                             <input class="text-input small-input"  type="text" name="username"  value="{$name.userName}" />               
+                            <if condition="$_SESSION['loginGroupId'] eq 1">
+                            <label>Group:</label>
+                            <select name="group_id">
+                                <foreach name="groupList" item="v">
+                                    <option  value="{$v.id}" <eq name="v.id" value="$groupchecked">selected="selected"</eq> >{$v.title}</option>
+                               </foreach>
+                             
+							</select>
+                             </if>
+                           	</p>
+                            <br>
+                            <input class="button" style="text-transform:capitalize" type="button" name="BtnSave" onClick="document.editForm.submit()"  value="Save" />&nbsp;&nbsp;
+                            <input class="button" type="button" name="back" onClick="window.location.href='{:U('user',array('gid'=> (int)$_GET['gid']))}'"  value="Back" />      
+                            </form>                    	
+                        </div> <!-- End #tab1 --> 
+                    </div>
+                </div> 
+                <!--End Insert -->
+			
+			
+			<div class="clear"></div>
+			
+			
+			<!-- Start Notifications -->
+			
+			
+
+			
+			<!-- End Notifications -->
+			
+            <div id="footer">
+				<small> <!-- Remove this notice or replace it with whatever you want -->
+						&#169; Copyright 2013
+				</small>
+			</div>
+			
+			
+			
+			<!-- End #footer -->
+			
+		</div> <!-- End #main-content -->
+		
+	</div>
+	
+	
+	
+	</body>
+<!-- Download From www.exet.tk-->
+</html>
+
+		
+

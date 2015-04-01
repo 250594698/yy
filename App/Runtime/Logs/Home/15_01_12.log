@@ -1,0 +1,64 @@
+[ 2015-01-12T09:40:42+08:00 ] 66.249.84.145 /prosperity/www/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001235s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+SQL: SHOW COLUMNS FROM `yy_model` [ RunTime:0.001114s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY sort_order asc,yy_category.sort_order  [ RunTime:0.000793s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018589s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003681s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003773s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+SQL: SHOW COLUMNS FROM `yy_products` [ RunTime:0.001147s ]
+SQL: SELECT * FROM `yy_products` left join yy_products_manylanguage on yy_products.products_id=yy_products_manylanguage.products_id  WHERE ( yy_products_manylanguage.lang_id=2 and yy_products.categories_id=52 and yy_products.products_status=1 ) ORDER BY yy_products.products_adddate desc LIMIT 4   [ RunTime:0.001891s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.026697s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003071s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004436s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007289s ]
+SQL: SELECT * FROM `yy_model` left join yy_category on yy_model.model_id=yy_category.model_id left join yy_category_description on yy_category_description.categories_id=yy_category.categories_id  WHERE ( yy_category_description.language_id=2 ) ORDER BY yy_category.sort_order  [ RunTime:0.000534s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.031680s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003287s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.009014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.012084s ]
+SQL: SHOW COLUMNS FROM `yy_news` [ RunTime:0.001111s ]
+SQL: SELECT * FROM `yy_news` left join yy_news_manylanguage on yy_news.news_id=yy_news_manylanguage.news_id  WHERE ( yy_news_manylanguage.lang_id=2 and yy_news.news_status=1 ) ORDER BY yy_news.news_adddate desc LIMIT 3   [ RunTime:0.000990s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.037893s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003156s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.015672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.018613s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003373s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.015672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.018815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000603s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+

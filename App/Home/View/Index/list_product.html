@@ -1,0 +1,65 @@
+<include file="Public:top"/>
+
+		<!-- START OF MAIN -->
+		<div id="main" class="mb460 pd4">
+			<div class="breadcrumbs">
+				<a href="index.html">{:L('Home')}</a>
+				&gt;
+				<a href="#">{:L('Product')}</a>
+				&gt;
+				<foreach name="catename" item="a">
+				<span>{$a.categories_name}</span>
+				</foreach>
+			</div>
+
+			<div class="main_left2">
+				<h2 class="columnTitle columnTitle2">{:L('Product')}</h2>
+
+				<ul class="columnList1 columnList2">
+				{:W('Cate/menuProducts')}
+				</ul>
+				<script>
+                $(function(){
+                	var len=$(".columnList1 li a").length;
+                	//alert(len);
+				    $(".columnList1 li a").click(function(){
+						 $(this).addClass("curr").siblings().removeClass();
+						});
+				});
+                </script>
+
+				<div class="columnbase1 columnbase2"></div>
+			</div>
+
+			<div class="main_right2">
+			<foreach name="catename" item="a">
+				<h2 class="main_title2 reg f22">{$a.categories_name}</h2>
+			</foreach>
+				<div class="abs">
+				<foreach name="productsList" item="v">
+					<div class="absItme">						
+						<div class="productImg">
+							<a href="{:U('Index/cateShow',array('cate_id'=>$v['categories_id'],'products_id'=>$v['products_id']))}">
+							<if condition="$v.products_img neq ''"><img src="__PUBLIC__/Uploads/{$v.products_img}" alt=""><else/><img src="__PUBLIC__/Uploads/null.png" alt=""></if></a>
+						</div>
+					</div>
+				</foreach>
+
+				</div>
+			</div>
+			<div class="page">{$page}</div>
+		</div>
+		<!-- END OF MAIN -->
+	</div>
+	<!-- END OF CONTAINER -->
+
+	<!-- START OF FOOTER -->
+	<div id="footer">
+		<div class="footerText">
+			<p>Copyright &copy;2014 Prosperity Industrial (H.K.) Co., Ltd</p>
+		</div>
+	</div>
+	<!-- END OF FOOTER -->
+	<script src="js/jquery-2.0.2.js"></script>
+</body>
+</html>

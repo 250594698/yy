@@ -1,0 +1,53 @@
+<include file="Public:top"/>
+
+		<!-- START OF MAIN -->
+		<div id="main" class="pd4">
+			<div class="breadcrumbs">
+				<a href="index.html">{:L('Home')}</a>
+				&gt;
+				<a href="#">{:L('Product')}</a>
+				&gt;
+				<span>{:L('Injection Molding Trouble Shooting')}</span>
+			</div>
+
+			<div class="main_left2">
+				<h2 class="columnTitle columnTitle2">{:L('Product')}</h2>
+				<ul class="columnList1 columnList2">
+				{:W('Cate/menuProducts')}
+				</ul>
+
+				<div class="columnbase1 columnbase2"></div>
+			</div>
+
+			<div class="main_right2">
+			<foreach name="catename" item="a">
+				<h2 class="main_title2 reg f22">{$a.categories_name}</h2>
+			</foreach>
+            <foreach name="faultList" item="v">
+				<a href="__URL__/cateShow/cate_id/{$v.categories_id }/fault_id/{$v.fault_id}">
+				<div class="bug">
+					<h3 class="num">{$v.fault_num}</h3>
+					<span class="cause">{$v.fault_name}</span>
+					<br />
+					<p class="text f12">
+						<span class="cause2">{:L('fault cause')}</span>
+						<br />
+						{$v.fault_cause}
+					</p>
+				</div></a>
+			</foreach>
+			</div>
+		</div>
+		<!-- END OF MAIN -->
+	</div>
+	<!-- END OF CONTAINER -->
+
+	<!-- START OF FOOTER -->
+	<div id="footer">
+		<div class="footerText">
+			<p>Copyright &copy;2014 Prosperity Industrial (H.K.) Co., Ltd</p>
+		</div>
+	</div>
+	<!-- END OF FOOTER -->
+</body>
+</html>

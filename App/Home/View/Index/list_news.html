@@ -1,0 +1,49 @@
+<include file="Public:top"/>
+
+		<!-- START OF MAIN -->
+		<div id="main" class="mb460 pd4">
+			<div class="breadcrumbs">
+				<a href="index.html">{:L('Home')}</a>
+				&gt;
+				<span>{:L('News')}></span>
+				<span>{$year}</span>
+			</div>	
+
+			<div class="main_left2">
+				<h2 class="columnTitle">
+					{:L('News')}
+				</h2>
+				<ul class="columnList1">
+					{:W('Cate/menu2')}
+				</ul>
+				<div class="columnbase1"></div>
+			</div>
+
+			<div class="main_right2">
+			<foreach name="catename" item="a">
+				<h2 class="main_title2">{$a.categories_name}</h2>
+			</foreach>
+				<ul class="infoList">
+				<foreach name="newsList" item="v">
+					<if condition="L('lang_id') eq 1"><li><span class="infoTime">{$v.news_adddate|strtotime|date='d M Y',###}</span>
+					<else/><li><span class="infoTime">{$v.news_adddate|strtotime|date='Y年m月d日',###}</span></if>
+					<a href="{:U('Index/cateShow',array('cate_id'=>$cate_id,'news_id'=>$v['news_id']))}"><php>echo mb_substr($v['news_title'],0,46,'utf-8');</php></a></li>
+				</foreach>
+				</ul>
+				<div class="page">{$page}</div>
+			</div>
+		</div>
+		<!-- END OF MAIN -->
+	</div>
+	<!-- END OF CONTAINER -->
+	
+	<!-- START OF FOOTER -->
+	<div id="footer">
+		<div class="footerText">
+			<p>Copyright &copy;2014 Prosperity Industrial (H.K.) Co., Ltd</p>
+		</div>
+	</div>
+	<!-- END OF FOOTER -->
+	<script src="js/jquery-2.0.2.js"></script>
+</body>
+</html>

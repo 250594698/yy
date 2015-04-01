@@ -1,0 +1,26 @@
+<div id="sidebar"   >
+ <div id="sidebar-wrapper" style="position:relative; height:100%"> 		  
+    <!-- Sidebar Profile links -->
+    <div id="profile-links" style="margin-top:110px; font-size:12px;">
+        Hello,<a href="#" onclick="return false;" title="Edit your profile"><php>echo $_SESSION['admin'];</php></a>			
+        <br />
+        <br />
+        <a href="__APP__" target="_blank" title="View the Site">View the Site</a> | 
+        <a href="{:U('Login/LoginOut')}" title="Sign Out">Sign Out</a>
+     </div>	
+<ul id="main-nav">
+<li id="li_Menu_{$i}">    
+	    <a href="#" class="nav-top-item <php> if(in_array(MODULE_NAME,$value)) echo 'current'; </php>">Menu</a>
+    	<ul>
+    	{:W('Menu/menu')}        
+		</ul> 
+</li>
+<li id="li_Menu_{$i}"> 
+    	{:W('Menu/menuOne')}
+    	<ul>
+    	{:W('Menu/menu2')}	        
+		</ul> 
+</li>
+</ul> 				
+  </div>
+</div>

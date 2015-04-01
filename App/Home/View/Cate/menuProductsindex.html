@@ -1,0 +1,53 @@
+<!--  
+<foreach name="menu2index" item="v">
+     <a href="__URL__/cateJump/model_id/{$v.model_id}/cateid/{$v.categories_id}">
+							<div class="product">
+								<div class="productImg">
+									<span class="rectText" <if condition="L('lang_id') eq 1">style="font-size:12px;"</if>>
+										{$v.categories_name}
+										<i></i>
+									</span>
+									<img src="__PUBLIC__/imagesHome/product.jpg" alt="" />
+								</div>
+								<div class="productText">{$v.categories_description|html_entity_decode}</div>
+							</div>
+	 </a>
+</foreach>-->
+<a href="__URL__/cateJump/model_id/3/cateid/48">
+							<div class="product">
+								<div class="productImg">
+									<span class="rectText" <if condition="L('lang_id') eq 1">style="font-size:12px;"</if>>
+										{:L('Company')}
+										<i></i>
+									</span>
+									<img src="__PUBLIC__/imagesHome/product.jpg" alt="" />
+								</div>
+								<div class="productText">{:L('Company')}</div>
+							</div>
+</a>
+
+<a href="__URL__/cateJump/model_id/2/cateid/51">
+							<div class="product">
+								<div class="productImg">
+									<span class="rectText" <if condition="L('lang_id') eq 1">style="font-size:12px;"</if>>
+										{:L('Introduction')}
+										<i></i>
+									</span>
+									<img src="__PUBLIC__/imagesHome/product.jpg" alt="" />
+								</div>
+								<div class="productText">{:L('Introduction')}</div>
+							</div>
+</a>
+
+<a href="__URL__/cateJump/model_id/2/cateid/53">
+							<div class="product">
+								<div class="productImg">
+									<span class="rectText" <if condition="L('lang_id') eq 1">style="font-size:12px;"</if>>
+										{:L('Standard Molding Conditions')}
+										<i></i>
+									</span>
+									<img src="__PUBLIC__/imagesHome/product.jpg" alt="" />
+								</div>
+								<div class="productText">{:L('Standard Molding Conditions')}</div>
+							</div>
+</a>
